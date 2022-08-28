@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, View, Button, TextInput, Image, Text, mathjs } from 'react-native';
+import { StyleSheet, View, Button, TextInput, Image, Text, Dimensions } from 'react-native';
 
 export default function App() {
   const [text, setText] = useState('');
@@ -33,7 +33,7 @@ export default function App() {
           placeholder="enter a number"
           onChangeText={text2 => setText2(text2)} value={text2}
         />
-        <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 10, marginBottom: 10 }}>
+        <View style={{ width:Dimensions.get("window").width * 0.2, flexDirection: 'row', justifyContent: 'space-around', marginTop: 10, marginBottom: 10 }}>
           <Button onPress={buttonPressed} title="+" />
           <Button onPress={buttonPressed2} title="-" />
         </View>
@@ -64,5 +64,6 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     
   },
+  
    
 });
