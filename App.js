@@ -20,7 +20,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Image style={styles.image} source={{uri: 'https://th.bing.com/th/id/OIP.vumzh-lDnQ6Bgr6rp1NzkAHaHa?w=209&h=209&c=7&r=0&o=5&dpr=1.5&pid=1.7'}} />
-      <Text >Result: {result} </Text>
+      <Text style={styles.text}>Result: {result} </Text>
         <TextInput 
           style={styles.input} 
           keyboardType={'numeric'}
@@ -35,7 +35,7 @@ export default function App() {
         />
         <View style={{ width:Dimensions.get("window").width * 0.2, flexDirection: 'row', justifyContent: 'space-around', marginTop: 10, marginBottom: 10 }}>
           <Button onPress={buttonPressed} title="+" />
-          <Button onPress={buttonPressed2} title="-" />
+          <Button onPress={buttonPressed2} title="–" />
         </View>
         
         
@@ -62,8 +62,11 @@ const styles = StyleSheet.create({
     width:200, 
     borderColor: 'gray', 
     borderWidth: 1,
-    
+    fontSize: 20,
   },
+  text : {
+    fontSize: 20,
+  }
   
    
 });
