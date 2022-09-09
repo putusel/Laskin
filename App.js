@@ -14,6 +14,7 @@ export default function App() {
     const history = text.toString() + ' + ' + text2.toString() + ' = ' + result.toString();
     setData2([...data, { key: history }]);
     setText('');
+    setText2('');
   };
   const buttonPressed2 = () => { 
     const result = Number(text)-Number(text2);
@@ -21,6 +22,7 @@ export default function App() {
     const history = text.toString() + ' - ' + text2.toString() + ' = ' + result.toString();
     setData2([...data, { key: history }]);
     setText('');
+    setText2('');
     
   };
 
